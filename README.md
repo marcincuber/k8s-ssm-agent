@@ -13,6 +13,8 @@ $ kubectl apply -f deploy/daemonset.yaml
 $ aws --region eu-west-1 ssm start-session --target i-123456asdmasdasdasd
 ```
 
+EKS worker node permissions that are required for ssm agent to work correctly are defined in [iam_role_policy.json](./iam_role_policy.json).
+
 ## Rational
 
 EKS optimized AMI doesn't include aws-ssm-agent. Since we are using Kubernetes, we are also deploying SSM agents Kubernetes way. This is an alternative way of installing aws-ssm-agent binary.

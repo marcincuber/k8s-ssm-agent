@@ -2,16 +2,17 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: k8s-ssm-agent
+  namespace: kube-system
   labels:
     k8s-app: k8s-ssm-agent
 spec:
   selector:
     matchLabels:
-      name: k8s-ssm-agent
+      k8s-app: k8s-ssm-agent
   template:
     metadata:
       labels:
-        name: k8s-ssm-agent
+        k8s-app: k8s-ssm-agent
     spec:
       hostNetwork: true
       containers:

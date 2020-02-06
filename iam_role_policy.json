@@ -1,0 +1,20 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    { 
+      "Sid": "AllowActionsForSSMSession",
+      "Effect": "Allow",
+      "Action": [
+          "ssm:UpdateInstanceInformation",
+          "ssm:ListAssociations",
+          "ssm:ListInstanceAssociations",
+          "ssmmessages:CreateControlChannel",
+          "ssmmessages:CreateDataChannel",
+          "ssmmessages:OpenControlChannel",
+          "ssmmessages:OpenDataChannel",
+          "ec2messages:GetMessages"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
